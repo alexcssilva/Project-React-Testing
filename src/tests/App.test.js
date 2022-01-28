@@ -50,7 +50,6 @@ describe('Teste se a aplicação é redirecionada para a página de "About"', ()
   it('Na URL "/about", ao clicar no link "About" da barra de navegação.', () => {
     const { history } = renderWithRouter(<App />);
 
-    const homeLink = screen.getByRole('link', { name: /home/i });
     const aboutLink = screen.getByRole('link', { name: /about/i });
     userEvent.click(aboutLink);
 
