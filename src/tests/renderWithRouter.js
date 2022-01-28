@@ -4,14 +4,11 @@ import { createMemoryHistory } from 'history';
 import React from 'react';
 
 function renderWithRouter(component) {
-  const customHistory = createMemoryHistory();
-
-  const returnFromRender = render(
-    <Router history={ customHistory }>
-      { component }
-    </Router>,
-  );
-  return { history: customHistory, ...returnFromRender };
+  const history = createMemoryHistory();
+  return ({
+    ...render(<Router history={ history }>{component}</Router>),
+    history,
+  });
 }
 
 export default renderWithRouter;
