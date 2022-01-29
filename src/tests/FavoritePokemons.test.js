@@ -1,8 +1,8 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import App from '../App';
 import renderWithRouter from './renderWithRouter';
-import userEvent from '@testing-library/user-event';
 
 describe('Teste o componente <FavoritePokemons.js />', () => {
   it('Teste se é exibido na tela a mensagem "No favorite pokemon found".', () => {
