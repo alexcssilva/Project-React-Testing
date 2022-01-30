@@ -24,8 +24,8 @@ describe('Teste se é exibido o próximo Pokémon da lista click "Próximo poké
   it('Os próximos Pokémons da lista devem ser mostrados, um a um, ao clicar', () => {
     renderWithRouter(<App />);
 
-    const nextPokemon = screen.getByRole('button', { name: /próximo pokémon/i });
-    userEvent.click(nextPokemon);
+    const clickPokemon = screen.getByRole('button', { name: /próximo pokémon/i });
+    userEvent.click(clickPokemon);
   });
 
   it('O primeiro Pokémon da lista deve ser mostrado ao clicar no botão', () => {
